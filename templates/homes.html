@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <section onclick="hidesidebar()">
+        <main>
+            <section class="firstSection container">
+                <div class="fSectionrow row row-col-md-2">
+                    <div class="leftSection col-md-6 fs-3 text-white fw-bolder text-center">
+                        Hi, My name is <span class="purple">Purnendu</span>
+                        <div> and I am a passionate</div>
+                        <span id="element" class="text-primary"></span>
+                    </div>
+                    <div class="rightSection col-md-6">
+                        <img src="{% static 'image/pg.png' %}" class="img-fluid">
+                    </div>
+                </div>
+
+                <section class="section2 col-12 col-md-12 col-lg-12">
+                    <div class="line"></div>
+                    <h1>Skill</h1>
+                    <div class="row1">
+                        <div>
+                            <div class="skil">
+                                <img src="{% static 'image/python.jpg' %}" class="img-fluid">
+                                <div>Python</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skil">
+                                <img src="{% static 'image/django.jpg' %}" class="img-fluid">
+                                <div>Django</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skil">
+                                <img src="{% static 'image/htmlCss.jpg' %}" class="img-fluid">
+                                <div class="htmlname">Html & Css</div>
+                            </div>
+                        </div>
+                        <div class="skilnone">
+                            <div class="skil">
+                                <img src="{% static 'image/bootstrap.jpg' %}" class="img-fluid">
+                                <div class="htmlname">bootstrap</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skil">
+                                <img src="{% static 'image/javascript.png' %}" class="img-fluid">
+                                <div class="htmlname" style="right:10px;">Javascript</div>
+                            </div>
+                        </div>
+                        <div class="skilnone">
+                            <div class="skil">
+                                <img src="{% static 'image/mysql.jpg' %}" class="img-fluid">
+                                <div>Mysql</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </section>
+
+{% endblock %}

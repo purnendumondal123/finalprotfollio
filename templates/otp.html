@@ -1,0 +1,31 @@
+{% extends "base1.html" %}
+{% block content %}
+
+{% comment %} <div class="container mt-5 pt-4">
+
+    <div class="col-6 mx-auto">
+        <h3 class="text-center">Enter OTP sent to your number {{message}}</h1>
+        <form class='mt-2'>
+            <div class='row'>
+                <div class="form-group col-12 mt-3">
+                    <input type="text" placeholder="Enter otp" class="form-control" name="otp">
+                </div>
+            </div>
+
+            <p>Don't have account <a href='{% url "register" %}'>Register</a></p>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div> {% endcomment %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>OTP sent to {{ email }}</p>
+    <input type="text" name="otp" placeholder="Enter OTP"><br>
+    <button type="submit">Verify</button>
+    {% if message %}
+        <p class="{{ class }}">{{ message }}</p>
+    {% endif %}
+</form>
+
+{% endblock %}
